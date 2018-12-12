@@ -8,7 +8,7 @@ namespace BE
 {
     public class Trainee : Types
     {
-        //CONFIGURATION
+        //CONFIGURATION...
         public static  Configuration temp;
 
         int Trainee_id;
