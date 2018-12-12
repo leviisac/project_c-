@@ -41,22 +41,46 @@ namespace BL
 
         }
 
-        void addtest(Test x)
+        public void addtest(Test x)
         {
+            int today;
+            int date;
             if (temp.Get_Trainee(x.Traineeid) == null)
                 throw new Exception("this trianee doesnt exist...");
-            
+
 
             if (temp.Get_Trainee(x.Traineeid).numclass < 20)
                 throw new Exception("you need 20 classes to do the test...");
 
             if (temp.Get_Trainee(x.Traineeid).mylasttest.testdate.Year == DateTime.Today.Year) // if the last test it's the same year as today...
             {
-                int date = temp.Get_Trainee(x.Traineeid).mylasttest.testdate.DayOfYear;   // the day of the year in the last test
-                int today = DateTime.Today.DayOfYear; //the day of the year today
-                if ( (today - date )<7)
+                date = temp.Get_Trainee(x.Traineeid).mylasttest.testdate.DayOfYear;   // the day of the year in the last test
+                today = DateTime.Today.DayOfYear; //the day of the year today
+                if ((today - date) < 7)
                     throw new Exception("sorry , but you need to wait 7 days to do the test another time...");
-            }   
+            }
+            date = temp.Get_Trainee(x.Traineeid).mylasttest.testdate.Year;
+            today = DateTime.Today.Year;
+            if ((today - date) == 1 && DateTime.Today.Month == 1 && temp.Get_Trainee(x.Traineeid).mylasttest.testdate.Month == 12) //if (the difference of the years is only 1 && today its january && the test was in december
+            {
+                DateTime TEST = temp.Get_Trainee(x.Traineeid).mylasttest.testdate;
+                DateTime TODAY = DateTime.Today;
+                int i = 0;
+                while (TEST.CompareTo(TODAY) <= 0)
+                {
+                    TEST.AddDays(1);
+                    i++;
+                }
+                if (i < 7)
+                    throw new Exception("sorry , but you need to wait 7 days to do the test another time...");
+            }
+
+
+            temp.add_test(x);
+
+        }
+            
+
 
     }
 }
