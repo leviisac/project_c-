@@ -9,11 +9,11 @@ namespace BE
 {
     public class Test : Types
     {
-        public int Test_num;
-        public int Tester_num { get; set; }
+         int Test_num;
+         int Tester_num;
         int Trainee_id;
         DateTime Test_date;
-        public Adress Address_test { get; set; }
+        Adress Address_test;
         public bool[,] kriterionim = new bool[4, 2];
         public string notes { get; set; }
 
@@ -27,6 +27,21 @@ namespace BE
         {
             get { return Test_date; }
             set { Test_date = value; }
+        }
+        public int test_num
+        {
+            get { return Test_num; }
+            set { Test_num = value; }
+        }
+        public int tester_num
+        {
+            get { return Tester_num; }
+            set { Tester_num = value; }
+        }
+         public Adress address_test
+        {
+            get { return Address_test; }
+            set { Adress Address_test = value; }
         }
     }
 }
