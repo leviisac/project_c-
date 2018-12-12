@@ -15,7 +15,7 @@ namespace BE
         public string Trainee_name { get; set; }
         public string Trainee_lname { get; set; }
         public gender Trainee_gender { get; set; }
-        public int Trainee_tel { get; set; }
+        int Trainee_tel;
         public Adress Trainee_Adress { get; set; }
         DateTime Trainee_Birthday;
         public Car_type Trainee_ctype { get; set; }
@@ -25,6 +25,11 @@ namespace BE
         int num_class;
         Test my_last_test;
 
+        public int traineetel
+        {
+            get { return Trainee_tel; }
+            set { Trainee_tel = value; }
+        }
         public Trainee()
         {
             Trainee_id = temp.kod_ratz();
