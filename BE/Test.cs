@@ -10,7 +10,7 @@ namespace BE
     public class Test : Types
     {
         public int Test_num;
-        public int Tester_num { get; set; }
+        int Tester_num;
         int Trainee_id;
         DateTime Test_date;
         public Adress Address_test { get; set; }
@@ -19,10 +19,13 @@ namespace BE
 
         public int Traineeid
         {
-           get { return Trainee_id; }
+            get { return Trainee_id; }
             set { Trainee_id = value; }
         }
-
+        public int testernum
+        {
+            get { return Tester_num; }
+        }
         public DateTime testdate
         {
             get { return Test_date; }

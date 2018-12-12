@@ -12,7 +12,7 @@ namespace BE
 
 
         public Adress Tester_adress { get; set; }
-        public int Tester_id { get; set; }
+        int Tester_id;
         public string Tester_lname { get; set; }
         public string Tester_name { get; set; }
         DateTime Tester_Birthday;
@@ -26,7 +26,10 @@ namespace BE
         public bool[,] intArray = new bool[5, 6];
         public static int Max_distance;
 
-
+        public int testerid
+        {
+            get { return Tester_id; }
+        }
         public DateTime testerbirthday
         {
             get { return Tester_Birthday; }
