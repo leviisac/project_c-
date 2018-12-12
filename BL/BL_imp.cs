@@ -45,7 +45,7 @@ namespace BL
         {
             if (temp.Get_Trainee(x.Traineeid) == null)
                 throw new Exception("this trianee doesnt exist...");
-            Console.WriteLine();
+            
 
             if (temp.Get_Trainee(x.Traineeid).numclass < 20)
                 throw new Exception("you need 20 classes to do the test...");
