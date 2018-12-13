@@ -16,7 +16,7 @@ namespace BE
         public string Tester_lname { get; set; }
         public string Tester_name { get; set; }
         DateTime Tester_Birthday;
-        public int number_of_tests_week { get; set; }
+        int number_of_tests_week;
         public int Tel_num { get; set; }
         public int Experience { get; set; }
         public int Max_test_pweek { get; set; }
@@ -25,6 +25,12 @@ namespace BE
         public Transmission_type Tester_transtype { get; set; }
         public bool[,] intArray = new bool[5, 6];
         public static int Max_distance;
+
+        public int number_of_testsweek
+        {
+            get { return number_of_tests_week;  }
+            set { number_of_tests_week = value; }
+        }
 
         public int testerid
         {

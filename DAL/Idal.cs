@@ -20,8 +20,7 @@ namespace DAL
 
         void erase_trainee(Trainee x);
         void erase_tester(Tester x);
-        void erase_test(Test x);
-
+        
         
         void update_test(Test x);
         void update_trainee(Trainee x);
@@ -30,7 +29,7 @@ namespace DAL
         
         Trainee Get_Trainee(int id);
         Tester Get_Tester(int id);
-        Test Get_Tests();
+        Test Get_Test(int num);
 
 
 

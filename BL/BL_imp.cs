@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using BE;
 using DAL;
-using DS;
+
 
 namespace BL
 {
@@ -25,7 +25,7 @@ namespace BL
             if ((today-year)<=temp2.tester_gilminimum)
                 throw new Exception("the tester is very young...");
 
-            if((x.number_of_tests_week)>=(x.Max_test_pweek))
+            if((x.number_of_testsweek)>=(x.Max_test_pweek))
                 throw new Exception("maximum number of tests reached...");
 
             
