@@ -96,7 +96,7 @@ namespace DAL
         }
 
 
-        //UPDATE FUNCTIONS
+        //UPDATE FUNCTIONS..
 
 
         public void update_test(Test x)
