@@ -20,8 +20,7 @@ namespace DAL
 
         void erase_trainee(Trainee x);
         void erase_tester(Tester x);
-        void erase_test(Test x);
-
+        
         
         void update_test(Test x);
         void update_trainee(Trainee x);

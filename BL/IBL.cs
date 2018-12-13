@@ -9,5 +9,7 @@ namespace BL
         void addtester(Tester x);
         void addtrainee(Trainee x);
         void addtest(Test x);
+
+      
     }
 }

@@ -13,9 +13,22 @@ namespace BE
         int Tester_num;
         int Trainee_id;
         DateTime Test_date;
-        public Adress Address_test { get; set; }
+        Adress Address_test;
         public bool[,] kriterionim = new bool[4, 2];
-        public string notes { get; set; }
+        string Notes;
+
+        public string notes
+        {
+            get { return Notes; }
+            set { Notes = value; }
+        }
+
+
+        public Adress adresstest
+        {
+            get{ return Address_test; }
+            set { Address_test = value; }
+        }
 
         public int traineeid
         {

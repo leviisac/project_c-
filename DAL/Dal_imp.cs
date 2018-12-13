@@ -58,15 +58,6 @@ namespace DAL
         }
 
 
-        public void erase_test(Test x)
-        {
-            if (x == null)
-                throw new Exception("not found...");
-
-            DataSource.testings.Remove(x);
-        }
-
-
         public void erase_trainee(Trainee x)
         {
             if (x == null)
