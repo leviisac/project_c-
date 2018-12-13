@@ -9,7 +9,7 @@ namespace BE
 {
     public class Test : Types
     {
-        public int Test_num;
+        int Test_num;
         int Tester_num;
         int Trainee_id;
         DateTime Test_date;
@@ -17,19 +17,31 @@ namespace BE
         public bool[,] kriterionim = new bool[4, 2];
         public string notes { get; set; }
 
-        public int Traineeid
+        public int traineeid
         {
             get { return Trainee_id; }
             set { Trainee_id = value; }
         }
+
+
         public int testernum
         {
             get { return Tester_num; }
         }
+
+
         public DateTime testdate
         {
             get { return Test_date; }
             set { Test_date = value; }
+        }
+
+
+
+        public int testnum
+        {
+            get { return Test_num; }
+            set { Test_num = value; }
         }
     }
 }

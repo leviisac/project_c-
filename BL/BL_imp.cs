@@ -13,7 +13,8 @@ namespace BL
     {
         DAL.Idal temp;
         Configuration temp2;
-
+        //****************************************************************** 
+        //ADD A TESTER
 
         public void addtester(Tester x)
         {
@@ -31,8 +32,10 @@ namespace BL
             //else..
             temp.add_tester(x);  
         }
+        //****************************************************************** 
 
 
+        //ADD A TRAINEE
 
         public void addtrainee(Trainee x)
         {
@@ -44,24 +47,25 @@ namespace BL
                 throw new Exception("the trainee is very young...");
 
         }
+        //****************************************************************** 
 
-
+        //ADD A TEST
 
         public void addtest(Test x)
         {
             int today;
             int date;
-            if (temp.Get_Trainee(x.Traineeid) == null)
+            if (temp.Get_Trainee(x.traineeid) == null)
                 throw new Exception("this trianee doesnt exist...");
 
 
-            if (temp.Get_Trainee(x.Traineeid).numclass < temp2.min_numofclass)
+            if (temp.Get_Trainee(x.traineeid).numclass < temp2.min_numofclass)
                 throw new Exception("you need 20 classes to do the test...");
 
 
-            if (temp.Get_Trainee(x.Traineeid).mylasttest.testdate.Year == DateTime.Today.Year) // if the last test , it's the same year as today...
+            if (temp.Get_Trainee(x.traineeid).mylasttest.testdate.Year == DateTime.Today.Year) // if the last test , it's the same year as today...
             {
-                date = temp.Get_Trainee(x.Traineeid).mylasttest.testdate.DayOfYear;   // the day of the year in the last test
+                date = temp.Get_Trainee(x.traineeid).mylasttest.testdate.DayOfYear;   // the day of the year in the last test
                 today = DateTime.Today.DayOfYear;                                      //the day of the year today
 
                 if ((today - date) < temp2.min_days_betweentests)                   //if the difference its less than a minimum days between the tests....
@@ -69,16 +73,16 @@ namespace BL
             }
 
 
-            date = temp.Get_Trainee(x.Traineeid).mylasttest.testdate.Year;     //year of the last test
+            date = temp.Get_Trainee(x.traineeid).mylasttest.testdate.Year;     //year of the last test
             today = DateTime.Today.Year;                                       //today's year
 
 
             //checking if even though the dates are in different years, the difference is less than 7
             //for example if the test was in 29/12/2017 and we want to add a test at 02/01/2018
 
-            if ((today - date) == 1 && DateTime.Today.Month == 1 && temp.Get_Trainee(x.Traineeid).mylasttest.testdate.Month == 12) //if (the difference of the years is only 1 && today its january && the test was in december
+            if ((today - date) == 1 && DateTime.Today.Month == 1 && temp.Get_Trainee(x.traineeid).mylasttest.testdate.Month == 12) //if (the difference of the years is only 1 && today its january && the test was in december
             {
-                DateTime TEST = temp.Get_Trainee(x.Traineeid).mylasttest.testdate;
+                DateTime TEST = temp.Get_Trainee(x.traineeid).mylasttest.testdate;
                 DateTime TODAY = DateTime.Today;
                 int i = 0;
 
@@ -93,12 +97,15 @@ namespace BL
                     throw new Exception("sorry , but you need to wait 7 days to do the test another time...");
             }
 
-            
+            if(temp.Get_Trainee(x.traineeid).trainee_ctype != temp.Get_Tester(x.testernum).Tester_ctype)
+                throw new Exception("the car type of the tester , its not the same as the trainee!");
 
             temp.add_test(x);
 
+
+
         }
-            
+         //******************************************************************   
 
 
     }
