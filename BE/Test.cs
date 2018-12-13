@@ -9,39 +9,39 @@ namespace BE
 {
     public class Test : Types
     {
-         int Test_num;
-         int Tester_num;
+        int Test_num;
+        int Tester_num;
         int Trainee_id;
         DateTime Test_date;
-        Adress Address_test;
+        public Adress Address_test { get; set; }
         public bool[,] kriterionim = new bool[4, 2];
         public string notes { get; set; }
 
-        public int Traineeid
+        public int traineeid
         {
-           get { return Trainee_id; }
+            get { return Trainee_id; }
             set { Trainee_id = value; }
         }
+
+
+        public int testernum
+        {
+            get { return Tester_num; }
+        }
+
 
         public DateTime testdate
         {
             get { return Test_date; }
             set { Test_date = value; }
         }
-        public int test_num
+
+
+
+        public int testnum
         {
             get { return Test_num; }
             set { Test_num = value; }
-        }
-        public int tester_num
-        {
-            get { return Tester_num; }
-            set { Tester_num = value; }
-        }
-         public Adress address_test
-        {
-            get { return Address_test; }
-            set { Adress Address_test = value; }
         }
     }
 }
