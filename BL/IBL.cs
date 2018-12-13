@@ -10,6 +10,6 @@ namespace BL
         void addtrainee(Trainee x);
         void addtest(Test x);
 
-      
+        void updatest(Test x);
     }
 }
