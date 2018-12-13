@@ -12,8 +12,8 @@ namespace DAL
     {
 
 
-        // ADD FUNCTIONS
-
+        // ADD FUNCTIONS...
+        //
 
         public void add_test(Test x)
         {
@@ -55,15 +55,6 @@ namespace DAL
                 throw new Exception("not found...");
 
             DataSource.testers.Remove(x);
-        }
-
-
-        public void erase_test(Test x)
-        {
-            if (x == null)
-                throw new Exception("not found...");
-
-            DataSource.testings.Remove(x);
         }
 
 
