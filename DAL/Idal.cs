@@ -30,7 +30,7 @@ namespace DAL
         
         Trainee Get_Trainee(int id);
         Tester Get_Tester(int id);
-        Test Get_Tests();
+        Test Get_Test(int num);
 
 
 
