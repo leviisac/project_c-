@@ -12,8 +12,8 @@ namespace DAL
     {
 
 
-        // ADD FUNCTIONS
-
+        // ADD FUNCTIONS...
+        //
 
         public void add_test(Test x)
         {
