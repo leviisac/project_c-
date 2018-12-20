@@ -6,13 +6,34 @@ using System.Threading.Tasks;
 
 namespace BE
 {
-     public class Types
+    public class Types
     {
-         public struct Adress
+        public struct Adress
         {
-            static string city;
-            static string street;
-            static int House_num;
+             string City;
+             string Street;
+             int House_num;
+
+            
+           public string city
+            {
+                get { return City; }
+                set { City = value; }
+            }
+
+            public string street
+            {
+                get { return Street; }
+                set { Street = value; }
+            }
+
+            public int house_num
+            {
+                
+                get { return House_num; }
+                set { House_num = value; }
+            }
+
         }
         public enum Car_type
         {
