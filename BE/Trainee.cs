@@ -47,60 +47,65 @@ namespace BE
             get { return Trainee_lname; }
             set { Trainee_lname = value; }
         }
-        public gender trainee_gender
+        public int trainee_gender
         {
-            get { return Trainee_gender; }
-            set { Trainee_gender = value; }
+            get { return (int)Trainee_gender; }
+            set { Trainee_gender = (gender)Enum.Parse(typeof(gender), value.ToString()); }
         }
-        public Adress trainee_Adress
+        public string Adress_city
         {
-            get { return Trainee_Adress; }
-            set { trainee_Adress = value; }
+            get { return Trainee_Adress.city; }
+            set { Trainee_Adress.city = value; }
+        }
+        public string street_adress
+        {
+            get { return Trainee_Adress.street; }
+            set { Trainee_Adress.street = value; }
+        }
+
+        public int housenum_adress
+        {
+            get { return Trainee_Adress.house_num; }
+            set { Trainee_Adress.house_num = value; }
         }
         public int trainee_ctype
         {
             get { return (int)Trainee_ctype; }
             set { Trainee_ctype = (Car_type)Enum.Parse(typeof(Car_type), value.ToString()); }
         }
-        public Transmission_type trainee_transtype
-        {
-            get { return Trainee_transtype; }
-            set { Trainee_transtype = value; }
-        }
-      
 
-        /*public Trainee(int trainee_id, string trainee_name, string trainee_lname, gender trainee_gender, int trainee_tel, Adress trainee_Adress, DateTime trainee_Birthday, Car_type trainee_ctype, Transmission_type trainee_transtype, string school, string my_tester, int num_class, Test my_last_test, int num_of_tests, int num_of_tests, int traineetel, string trainee_name, string trainee_lname, gender trainee_gender, Adress trainee_Adress, Car_type trainee_ctype, Transmission_type trainee_transtype, int traineeid, string school, string my_tester, DateTime traineebirthday, Test mylasttest, int numclass)
+        public int trainee_transtype
+        {
+            get { return (int)Trainee_transtype; }
+            set { Trainee_transtype = (Transmission_type)Enum.Parse(typeof(Transmission_type), value.ToString()); }
+        }
+
+
+        public Trainee(int trainee_id, string name, string lname, int xgender, int tel, string street_Adress, string city_Adress,int housenum,int ctype,int transtype, DateTime Birthday,  string myschool,string mytester)
         {
             Trainee_id = trainee_id;
-            this.trainee_name = trainee_name;
-            this.trainee_lname = trainee_lname;
-            this.trainee_gender = trainee_gender;
-            Trainee_tel = trainee_tel;
-            this.trainee_Adress = trainee_Adress;
-            Trainee_Birthday = trainee_Birthday;
-            this.trainee_ctype = trainee_ctype;
-            this.trainee_transtype = trainee_transtype;
-            this.school = school;
-            this.my_tester = my_tester;
-            this.num_class = num_class;
-            this.my_last_test = my_last_test;
-            this.num_of_tests = num_of_tests;
-            this.num_of_tests = num_of_tests;
-            this.traineetel = traineetel;
-            this.trainee_name = trainee_name;
-            this.trainee_lname = trainee_lname;
-            this.trainee_gender = trainee_gender;
-            this.trainee_Adress = trainee_Adress;
-            this.trainee_ctype = trainee_ctype;
-            this.trainee_transtype = trainee_transtype;
-            this.traineeid = traineeid;
-            this.school = school;
-            this.my_tester = my_tester;
-            this.traineebirthday = traineebirthday;
-            this.mylasttest = mylasttest;
-            this.numclass = numclass;
-        }*/
+            Trainee_name = name;
+            Trainee_lname = lname;
+            Trainee_gender = (gender)Enum.Parse(typeof(gender), xgender.ToString());
+            Trainee_tel = tel;
+            Trainee_Adress.city = city_Adress;
+            Trainee_Adress.street = street_Adress;
+            Trainee_Adress.house_num = housenum;
+            Trainee_Birthday = Birthday;
+            this.trainee_ctype = ctype;
+            this.trainee_transtype = transtype;
+            this.school = myschool;
+            this.my_tester = mytester;
 
+
+        }
+        public Trainee() { }
+
+
+        public string tctype_string
+        {
+            get { return Convert.ToString(Trainee_transtype); }
+        }
         public int traineeid
         {
             get { return Trainee_id; }

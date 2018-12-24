@@ -98,12 +98,7 @@ namespace BE
         {
             get { return Test_date; }
             set { Test_date = value; }
-        }
+        }   
 
-
-
-      
-
-        public object DAL { get; private set; }
     }
 }

@@ -11,21 +11,21 @@ namespace DS
     {
 
 
-        public static List<Trainee> trainees;
-        public static List<Tester> testers = new List<Tester>
+        public static List<Trainee> trainees = new List<Trainee>
         {
-            new BE.Tester(123456,"feifen","faifen",new DateTime(2018,8,2,9,0,0),996264555,2,1,1,1)
+            new BE.Trainee(123456789 ,"elad" ,"rabinowicz", 1,0544778542,"hechalutz","bne brak",477,1,1,new DateTime(1998,5,2),"NEHIGASHION","moshe")
         };
 
-        public static List<Test> testings = new List<Test>();
-        /*{
-            new BE.Test(123456,1234567,123456,new DateTime(2018,12,10,9,0,0),"irmiahu",16,"jerusalem",2),
-          /*  new BE.Test(BE.Configuration.current_code_for_num_test() ,208473835,209126309 ,new DateTime(2018,12,10,9,0,0),BE.Configuration.MAKE_adress("jerusalem","jafa",21),BE.Configuration.MAKE_TYPE_CAR(3) , BE.Configuration.MAKE_GEAR(0)),
-            new BE.Test(BE.Configuration.current_code_for_num_test() ,208800078,211457338 ,new DateTime(2018,3,18,11,0,0),BE.Configuration.MAKE_adress("jerusalem","herzel",3),BE.Configuration.MAKE_TYPE_CAR(2) , BE.Configuration.MAKE_GEAR(1)),
-            new BE.Test(BE.Configuration.current_code_for_num_test() ,336435524,300888997 ,new DateTime(2018,12,13,13,0,0),BE.Configuration.MAKE_adress("jerusalem","king david",29),BE.Configuration.MAKE_TYPE_CAR(1) , BE.Configuration.MAKE_GEAR(1)),
-            new BE.Test(BE.Configuration.current_code_for_num_test() ,208800078,005837315
+        public static List<Tester> testers = new List<Tester>
+        {
+            new BE.Tester(987654321 , "aharoni","moshe",new DateTime(1969,8,2),0588775447,2,1,1,1)
+        };
 
-        };      */
+        public static List<Test> testings = new List<Test>
+        {
+            new BE.Test( 987654321 , 123456,new DateTime(2019,1,2,9,0,0), "havaad haleumi", 21 , "jerusalem", 2)
+
+        };
 
 
 
