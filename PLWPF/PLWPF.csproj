@@ -54,10 +54,20 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Compile Include="choicewindow.xaml.cs">
-      <DependentUpon>choicewindow.xaml</DependentUpon>
+    <Compile Include="menulateral.xaml.cs">
+      <DependentUpon>menulateral.xaml</DependentUpon>
     </Compile>
-    <Page Include="idwindow.xaml">
+    <Compile Include="Trainee_choice_window.xaml.cs">
+      <DependentUpon>Trainee_choice_window.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Window1.xaml.cs">
+      <DependentUpon>Window1.xaml</DependentUpon>
+    </Compile>
+    <Page Include="menulateral.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="traineeidwindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -69,14 +79,18 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="idwindow.xaml.cs">
-      <DependentUpon>idwindow.xaml</DependentUpon>
+    <Compile Include="traineeidwindow.xaml.cs">
+      <DependentUpon>traineeidwindow.xaml</DependentUpon>
     </Compile>
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Page Include="choicewindow.xaml">
+    <Page Include="Trainee_choice_window.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Window1.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -99,7 +113,15 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <None Include="Properties\DataSources\BE.Configuration.datasource" />
     <None Include="Properties\DataSources\BE.Test.datasource" />
+    <None Include="Properties\DataSources\BE.Tester.datasource" />
+    <None Include="Properties\DataSources\BE.Trainee.datasource" />
+    <None Include="Properties\DataSources\BE.Types+Adress.datasource" />
+    <None Include="Properties\DataSources\BE.Types+Car_type.datasource" />
+    <None Include="Properties\DataSources\BE.Types+gender.datasource" />
+    <None Include="Properties\DataSources\BE.Types+Transmission_type.datasource" />
+    <None Include="Properties\DataSources\BE.Types.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -117,6 +139,9 @@
       <Project>{8009885a-d6e7-42ee-ac69-13caeedfac70}</Project>
       <Name>BL</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="imagens\download.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

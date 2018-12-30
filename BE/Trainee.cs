@@ -26,42 +26,81 @@ namespace BE
         Test my_last_test;
         int Num_of_tests;
 
+        //C-TOR
+
+        public Trainee(int trainee_id, string name, string lname, int xgender, int tel, string street_Adress, string city_Adress, int housenum, int ctype, int transtype, DateTime Birthday, string myschool, string mytester)
+        {
+            Trainee_id = trainee_id;
+            Trainee_name = name;
+            Trainee_lname = lname;
+            Trainee_gender = (gender)Enum.Parse(typeof(gender), xgender.ToString());
+            Trainee_tel = tel;
+            Trainee_Adress.city = city_Adress;
+            Trainee_Adress.street = street_Adress;
+            Trainee_Adress.house_num = housenum;
+            Trainee_Birthday = Birthday;
+            this.trainee_ctype = ctype;
+            this.trainee_transtype = transtype;
+            this.school = myschool;
+            this.my_tester = mytester;
+
+
+        }
+
+
+        public Trainee() { }
+
+
+
         public int num_of_tests
         {
             get { return Num_of_tests; }
             set { Num_of_tests = value; }
         } 
 
+
+
         public int traineetel
         {
             get { return Trainee_tel; }
             set { Trainee_tel = value; }
         }
+
+
         public string trainee_name
         {
             get { return Trainee_name; }
             set { Trainee_name = value; }
         }
+
+
         public string trainee_lname
         {
             get { return Trainee_lname; }
             set { Trainee_lname = value; }
         }
+
+
         public int trainee_gender
         {
             get { return (int)Trainee_gender; }
             set { Trainee_gender = (gender)Enum.Parse(typeof(gender), value.ToString()); }
         }
+
+
         public string Adress_city
         {
             get { return Trainee_Adress.city; }
             set { Trainee_Adress.city = value; }
         }
+
+
         public string street_adress
         {
             get { return Trainee_Adress.street; }
             set { Trainee_Adress.street = value; }
         }
+
 
         public int housenum_adress
         {
@@ -81,31 +120,17 @@ namespace BE
         }
 
 
-        public Trainee(int trainee_id, string name, string lname, int xgender, int tel, string street_Adress, string city_Adress,int housenum,int ctype,int transtype, DateTime Birthday,  string myschool,string mytester)
-        {
-            Trainee_id = trainee_id;
-            Trainee_name = name;
-            Trainee_lname = lname;
-            Trainee_gender = (gender)Enum.Parse(typeof(gender), xgender.ToString());
-            Trainee_tel = tel;
-            Trainee_Adress.city = city_Adress;
-            Trainee_Adress.street = street_Adress;
-            Trainee_Adress.house_num = housenum;
-            Trainee_Birthday = Birthday;
-            this.trainee_ctype = ctype;
-            this.trainee_transtype = transtype;
-            this.school = myschool;
-            this.my_tester = mytester;
-
-
-        }
-        public Trainee() { }
+      
 
 
         public string tctype_string
         {
+          
             get { return Convert.ToString(Trainee_transtype); }
         }
+
+
+
         public int traineeid
         {
             get { return Trainee_id; }

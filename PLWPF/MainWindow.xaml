@@ -13,7 +13,7 @@
             <RowDefinition Height="1*"/>
             <RowDefinition Height="1*"/>
         </Grid.RowDefinitions>
-        <Button Content="TRAINEE"  Margin="10" Grid.Row="0" FontSize="35" FontStyle="Italic" Background="LightSalmon" Foreground="Blue"/>
+        <Button Content="TRAINEE"  Margin="10" Grid.Row="0" FontSize="35" FontStyle="Italic" Background="LightSalmon" Foreground="Blue" Click="Button_Click"/>
         <Button Content="TESTER"  Margin="10" Grid.Row="1" FontSize="35" FontStyle="Italic" Background="BlueViolet" Foreground="LemonChiffon"/>
         <Button Content="TEST" Margin="10" Grid.Row="2" FontSize="35" Click="Button_Click" FontStyle="Italic" Background="Red" Foreground="Black"/>
        

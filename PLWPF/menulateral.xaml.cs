@@ -10,23 +10,19 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
+using System.Windows.Navigation;
 using System.Windows.Shapes;
 
 namespace PLWPF
 {
     /// <summary>
-    /// Interaction logic for Traineewindow.xaml
+    /// Interaction logic for menulateral.xaml
     /// </summary>
-    public partial class Traineewindow : Window
+    public partial class menulateral : UserControl
     {
-        public Traineewindow()
+        public menulateral()
         {
             InitializeComponent();
-        }
-
-        private void Button_Click(object sender, RoutedEventArgs e)
-        {
-            
         }
     }
 }

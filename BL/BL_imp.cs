@@ -16,6 +16,12 @@ namespace BL
 
 
 
+        public Trainee GetTrainee(int id)
+        {
+            return temp.Get_Trainee(id);
+        }
+
+
 
         #region delete functions
 

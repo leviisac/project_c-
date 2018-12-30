@@ -1,11 +1,11 @@
-﻿<Window x:Class="PLWPF.Traineewindow"
+﻿<Window x:Class="PLWPF.Trainee_choice_window"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:PLWPF"
         mc:Ignorable="d"
-        Title="Traineewindow" Height="450" Width="800">
+        Title="Trainee_choice_window" Height="450" Width="800">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="1*"/>
@@ -15,10 +15,10 @@
             <ColumnDefinition Width="1*"/>
             <ColumnDefinition Width="1*"/>
         </Grid.ColumnDefinitions>
-        <Button Content="ADD"  Margin="10" Grid.Row="0" FontSize="35"/>
-        <Button Content="DELETE"  Margin="10" Grid.Row="1" FontSize="35" />
-        <Button Content="UPDATE" Margin="10" Grid.Row="1" Grid.Column="1" FontSize="35" />
-        <Button Content="GET" Grid.Column="1"  Margin="10" FontSize="35"/>
+       
+        <Button x:Name="delete_button"  Content="DELETE"  Margin="15" Grid.Row="1" FontSize="35" Click="delete_button_click" />
+        <Button x:Name="update_button" Content="UPDATE" Margin="15" Grid.Row="1" Grid.Column="1" FontSize="35" />
+        <Button x:Name="get_button"  Content="GET" Grid.Column="1"  Margin="15" FontSize="35"/>
 
     </Grid>
 </Window>

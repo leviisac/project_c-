@@ -29,6 +29,8 @@ namespace BL
         void delete_trainee(int id);
         void delete_tester(int id);
 
+        Trainee GetTrainee(int id);
+
 
 
        

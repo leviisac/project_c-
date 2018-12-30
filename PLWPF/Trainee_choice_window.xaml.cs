@@ -15,23 +15,24 @@ using System.Windows.Shapes;
 namespace PLWPF
 {
     /// <summary>
-    /// Interaction logic for idwindow.xaml
+    /// Interaction logic for Traineewindow.xaml
     /// </summary>
-    public partial class idwindow : Window
+    public partial class Traineewindow : Window
     {
-        public idwindow()
+        public Traineewindow()
         {
             InitializeComponent();
         }
 
-        private void Window_Loaded(object sender, RoutedEventArgs e)
-        {
-
-        }
-
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-           
+            idwindow idwindow_var = new idwindow();
+            idwindow_var.Show();
+
+            
+
         }
+
+       
     }
 }
