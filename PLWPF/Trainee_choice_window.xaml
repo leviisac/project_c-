@@ -7,18 +7,9 @@
         mc:Ignorable="d"
         Title="Trainee_choice_window" Height="450" Width="800">
     <Grid>
-        <Grid.RowDefinitions>
-            <RowDefinition Height="1*"/>
-            <RowDefinition Height="1*"/>
-        </Grid.RowDefinitions>
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="1*"/>
-            <ColumnDefinition Width="1*"/>
-        </Grid.ColumnDefinitions>
-       
-        <Button x:Name="delete_button"  Content="DELETE"  Margin="15" Grid.Row="1" FontSize="35" Click="delete_button_click" />
-        <Button x:Name="update_button" Content="UPDATE" Margin="15" Grid.Row="1" Grid.Column="1" FontSize="35" />
-        <Button x:Name="get_button"  Content="GET" Grid.Column="1"  Margin="15" FontSize="35"/>
+        <Image HorizontalAlignment="Left" Height="278" Margin="278,83,0,0" VerticalAlignment="Top" Width="288" Source="imagens/estudante_perfil.jpg"/>
+
+
 
     </Grid>
 </Window>

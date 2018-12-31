@@ -14,7 +14,10 @@ namespace BL
         DAL.Idal temp = DAL.Factory.GetDAL();
         Configuration temp2=new Configuration();
 
-
+        public Tester Gettester(int id)
+        {
+            return temp.Get_Tester(id);
+        }
 
         public Trainee GetTrainee(int id)
         {

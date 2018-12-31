@@ -19,11 +19,12 @@ namespace PLWPF
     /// </summary>
     /// 
     
-    public partial class traineeidwindow : Window
+    public partial class id_window : Window
     {
         BL.IBL blvar;
         BE.Trainee trainee_temp;
-        public traineeidwindow()
+        BE.Tester tester_temp;
+        public id_window()
         {
             InitializeComponent();
            
@@ -35,9 +36,14 @@ namespace PLWPF
         {
             try
             {
-                trainee_temp = blvar.GetTrainee(int.Parse(this.id_text.Text));
-                if (trainee_temp == null) 
-                    throw new Exception("check your input and try again");
+                trainee_temp = blvar.GetTrainee(int.Parse(this.id_login.Text));
+                if (trainee_temp == null)
+                {
+                    tester_temp = blvar.Gettester(int.Parse(this.id_login.Text));
+                    if (tester_temp == null)
+                        throw new Exception("NOT FOUND! check your data ,and try again! ");
+                }
+                 
                 else
                 {
                     Trainee_choice_window wind = new Trainee_choice_window();

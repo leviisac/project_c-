@@ -25,9 +25,16 @@ namespace BE
         Transmission_type Tester_transtype;
         bool[,] Availability_tester = new bool[6, 5];
         static int Max_distance;
-        private Tester testertemp;
+        
 
+        public Tester Clone()
+        {
+            Tester clone = new Tester();
+            clone.Tester_name = Tester_name;
+            clone.Tester_lname=Tester
 
+           return clone;
+        }
 
         public string tctype_String
         {

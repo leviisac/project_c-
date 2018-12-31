@@ -34,6 +34,7 @@ namespace DAL
         List<Trainee> Get_all_trainee();
         List<Test> Get_all_tests();
 
+        bool get_all(int id);
 
         Trainee Get_Trainee(int id);
         Tester Get_Tester(int id);

@@ -30,6 +30,8 @@ namespace BL
         void delete_tester(int id);
 
         Trainee GetTrainee(int id);
+        Tester Gettester(int id);
+
 
 
 

@@ -54,39 +54,45 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="add_tester.xaml.cs">
+      <DependentUpon>add_tester.xaml</DependentUpon>
+    </Compile>
     <Compile Include="menulateral.xaml.cs">
       <DependentUpon>menulateral.xaml</DependentUpon>
     </Compile>
     <Compile Include="Trainee_choice_window.xaml.cs">
       <DependentUpon>Trainee_choice_window.xaml</DependentUpon>
     </Compile>
+    <Compile Include="update_trainee.xaml.cs">
+      <DependentUpon>update_trainee.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Window1.xaml.cs">
       <DependentUpon>Window1.xaml</DependentUpon>
     </Compile>
+    <Page Include="add_tester.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="menulateral.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="traineeidwindow.xaml">
+    <Page Include="id_window.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="MainWindow.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
     </Page>
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="traineeidwindow.xaml.cs">
-      <DependentUpon>traineeidwindow.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="MainWindow.xaml.cs">
-      <DependentUpon>MainWindow.xaml</DependentUpon>
-      <SubType>Code</SubType>
+    <Compile Include="id_window.xaml.cs">
+      <DependentUpon>id_window.xaml</DependentUpon>
     </Compile>
     <Page Include="Trainee_choice_window.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="update_trainee.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -142,6 +148,15 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="imagens\download.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="imagens\perfil.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="imagens\carro.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="imagens\estudante_perfil.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -46,6 +46,27 @@ namespace BE
 
 
         }
+        public Trainee Clone()
+        {
+            Trainee clone = new Trainee();
+            clone.Trainee_tel = this.Trainee_tel;
+            clone.Trainee_name = Trainee_name;
+            clone.trainee_lname = trainee_lname;
+            clone.Trainee_id = Trainee_id;
+            clone.Trainee_gender = Trainee_gender;
+            clone.Trainee_Adress.city = Trainee_Adress.city;
+            clone.Trainee_Adress.street = Trainee_Adress.street;
+            clone.Trainee_Adress.house_num = Trainee_Adress.house_num;
+            clone.Trainee_Birthday = Trainee_Birthday;
+            clone.Trainee_ctype = Trainee_ctype;
+            clone.Trainee_transtype = Trainee_transtype;
+            clone.School = School;
+            clone.My_tester = My_tester;
+            clone.my_last_test = my_last_test;
+
+
+            return clone;
+        }
 
 
         public Trainee() { }

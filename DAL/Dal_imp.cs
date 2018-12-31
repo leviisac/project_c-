@@ -15,6 +15,14 @@ namespace DAL
         // ADD FUNCTIONS...
         //
 
+        public bool get_all(int id)
+        {
+            foreach (var item in DataSource.testers)
+            {
+
+            }
+        }
+
         public void add_test(Test x)
         {
             if(Get_Test(x.testnum) != null)                                      //cheking if this test already exist
@@ -138,7 +146,7 @@ namespace DAL
 
         public List<Trainee> Get_all_trainee()
         {
-            List<Trainee> Copy = new List<Trainee> (DataSource.trainees);
+            List<Trainee> Copy = DataSource.trainees.Select(x => x.Clone()).ToList();
             return Copy;
         }
 

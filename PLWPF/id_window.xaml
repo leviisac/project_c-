@@ -1,0 +1,41 @@
+﻿<Window x:Class="PLWPF.id_window"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:PLWPF"
+        mc:Ignorable="d"
+        Title="id_window" Height="550" Width="700">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="183*"/>
+            <ColumnDefinition Width="139*"/>
+            <ColumnDefinition Width="163*"/>
+            <ColumnDefinition Width="183*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="51*"/>
+            <RowDefinition Height="55*"/>
+            <RowDefinition Height="37*"/>
+            <RowDefinition Height="37*"/>
+            <RowDefinition Height="49*"/>
+            <RowDefinition Height="32*"/>
+        </Grid.RowDefinitions>
+        <Image HorizontalAlignment="Left" Height="521" Margin="0,0,-0.4,-0.2" VerticalAlignment="Top" Width="694" Source="imagens/carro.jpg" Grid.RowSpan="6" Grid.ColumnSpan="4"/>
+
+        <Label Content="Name:" FontSize="40" Grid.Column="1"  Grid.Row="1" FontStyle="Italic" Foreground="Blue" Margin="0,109.4,0.2,0.8" Grid.RowSpan="2" />
+
+        <Label Content="id:" Grid.Column="1" FontSize="40" Grid.Row="2" Foreground="Blue" Margin="0,72.8,0.2,79.8" Grid.RowSpan="3"/>
+
+        <TextBox x:Name="name_login" Background="Aquamarine"  Grid.Column="2" Grid.Row="2" Margin="4.8,24.8,4.4,10.8"   />
+
+        <TextBox x:Name="id_login" Background="Aquamarine" Grid.Column="2" HorizontalAlignment="Left" Height="37" Margin="4.8,9.2,0,0" Grid.Row="3"   VerticalAlignment="Top" Width="154" RenderTransformOrigin="0.494,0.476"/>
+
+        <Button Content="LOGIN" Grid.Column="3"  Grid.Row="5" Margin="10" FontSize="20"/>
+
+        <Button Content="NEW" Grid.Column="0" Grid.Row="5" Margin="10" FontSize="20"/>
+
+
+
+    </Grid>
+</Window>
