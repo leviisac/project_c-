@@ -15,18 +15,27 @@ using System.Windows.Shapes;
 namespace PLWPF
 {
     /// <summary>
-    /// Interaction logic for Window1.xaml
+    /// Interaction logic for Main_Window.xaml
     /// </summary>
-    public partial class Window1 : Window
+    public partial class mainwindow : Window
     {
-        public Window1()
+        public mainwindow()
         {
             InitializeComponent();
+            id_window temp = new id_window();
+            
+            temp.ShowDialog();
+            this.Close();
+
         }
 
-        private void Window_Loaded(object sender, RoutedEventArgs e)
+        private void button_click(object sender, RoutedEventArgs e)
         {
-
+            //id_window temp = new id_window();
+            //this.Hide();
+            //temp.ShowDialog();
+            
+           
         }
     }
 }

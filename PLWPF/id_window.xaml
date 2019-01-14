@@ -5,35 +5,54 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:PLWPF"
         mc:Ignorable="d"
-        Title="id_window" Height="550" Width="700">
+        Title="id_window" Height="700" Width="1050">
     <Grid>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="183*"/>
-            <ColumnDefinition Width="139*"/>
-            <ColumnDefinition Width="163*"/>
-            <ColumnDefinition Width="183*"/>
+            <ColumnDefinition Width="215*"/>
+            <ColumnDefinition Width="232*"/>
+            <ColumnDefinition Width="338*"/>
+
+            <ColumnDefinition Width="258*"/>
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
-            <RowDefinition Height="51*"/>
-            <RowDefinition Height="55*"/>
-            <RowDefinition Height="37*"/>
-            <RowDefinition Height="37*"/>
-            <RowDefinition Height="49*"/>
-            <RowDefinition Height="32*"/>
+            <RowDefinition Height="2*"/>
+            <RowDefinition Height="2*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
         </Grid.RowDefinitions>
-        <Image HorizontalAlignment="Left" Height="521" Margin="0,0,-0.4,-0.2" VerticalAlignment="Top" Width="694" Source="imagens/carro.jpg" Grid.RowSpan="6" Grid.ColumnSpan="4"/>
+        <Image   Source="imagens/יםצק.png"  Grid.Row="1" Grid.Column="2"/>
 
-        <Label Content="Name:" FontSize="40" Grid.Column="1"  Grid.Row="1" FontStyle="Italic" Foreground="Blue" Margin="0,109.4,0.2,0.8" Grid.RowSpan="2" />
+        <Label Content="Name:" FontSize="31"  Grid.Row="3" FontStyle="Italic" Foreground="Blue" Grid.Column="1" />
 
-        <Label Content="id:" Grid.Column="1" FontSize="40" Grid.Row="2" Foreground="Blue" Margin="0,72.8,0.2,79.8" Grid.RowSpan="3"/>
+        <Label Content="id:" FontSize="31" Grid.Row="4" Foreground="Blue"  Grid.Column="1"/>
 
-        <TextBox x:Name="name_login" Background="Aquamarine"  Grid.Column="2" Grid.Row="2" Margin="4.8,24.8,4.4,10.8"   />
+        <TextBox x:Name="name_login" FontSize="30"  Grid.Column="2" Margin="9.8,10.2,9.6,9.8" Grid.Row="3"  />
 
-        <TextBox x:Name="id_login" Background="Aquamarine" Grid.Column="2" HorizontalAlignment="Left" Height="37" Margin="4.8,9.2,0,0" Grid.Row="3"   VerticalAlignment="Top" Width="154" RenderTransformOrigin="0.494,0.476"/>
+        <TextBox x:Name="id_login" FontSize="30"  Grid.Column="2" Grid.Row="4" Margin="9.8,10.2,9.6,9.8" />
 
-        <Button Content="LOGIN" Grid.Column="3"  Grid.Row="5" Margin="10" FontSize="20"/>
+        <Button Content="LOGIN" Click="Login_Button_Click" Grid.Column="3"  Grid.Row="8" FontSize="20" >
+            <Button.Style>
+                <Style>
+                    <Style.Triggers>
+                        <DataTrigger Binding="{Binding ElementName=name_login, Path=Text}" Value="">
+                            <Setter Property="Button.IsEnabled" Value="false"/>
+                        </DataTrigger>
+                        <DataTrigger Binding="{Binding ElementName=id_login, Path=Text}" Value="">
+                            <Setter Property="Button.IsEnabled" Value="false"/>
+                        </DataTrigger>
+                    </Style.Triggers>
+                </Style>
+            </Button.Style>
+        </Button>
 
-        <Button Content="NEW" Grid.Column="0" Grid.Row="5" Margin="10" FontSize="20"/>
+
+        <Button Content="NEW" Grid.Column="0" Grid.Row="8" Click="New_Click" FontSize="20" />
+
 
 
 

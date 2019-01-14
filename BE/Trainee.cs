@@ -28,7 +28,7 @@ namespace BE
 
         //C-TOR
 
-        public Trainee(int trainee_id, string name, string lname, int xgender, int tel, string street_Adress, string city_Adress, int housenum, int ctype, int transtype, DateTime Birthday, string myschool, string mytester)
+        public Trainee(int trainee_id, string name, string lname, int xgender, int tel, string street_Adress, string city_Adress, int housenum, int ctype, int transtype, DateTime Birthday, string myschool, string mytester,int num)
         {
             Trainee_id = trainee_id;
             Trainee_name = name;
@@ -43,13 +43,14 @@ namespace BE
             this.trainee_transtype = transtype;
             this.school = myschool;
             this.my_tester = mytester;
+            this.num_class = num;
 
 
         }
         public Trainee Clone()
         {
             Trainee clone = new Trainee();
-            clone.Trainee_tel = this.Trainee_tel;
+            clone.Trainee_tel = this.traineetel;
             clone.Trainee_name = Trainee_name;
             clone.trainee_lname = trainee_lname;
             clone.Trainee_id = Trainee_id;
@@ -116,14 +117,14 @@ namespace BE
         }
 
 
-        public string street_adress
+        public string Street_adress
         {
             get { return Trainee_Adress.street; }
             set { Trainee_Adress.street = value; }
         }
 
 
-        public int housenum_adress
+        public int Housenum_adress
         {
             get { return Trainee_Adress.house_num; }
             set { Trainee_Adress.house_num = value; }

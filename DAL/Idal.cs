@@ -22,7 +22,7 @@ namespace DAL
         void add_test(Test x);
         
 
-        void delete_trainee(Trainee x);
+        void delete_trainee(int x);
         void delete_tester(Tester x);
         
         
@@ -33,12 +33,11 @@ namespace DAL
         List<Tester> Get_all_tester();
         List<Trainee> Get_all_trainee();
         List<Test> Get_all_tests();
-
-        bool get_all(int id);
-
+      
         Trainee Get_Trainee(int id);
         Tester Get_Tester(int id);
-        Test Get_Test(int num);
+        Test get_test(int num);
+
         List<Test> Get_tests_of_trainee(int id);
 
 

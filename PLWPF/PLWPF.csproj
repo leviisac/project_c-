@@ -54,26 +54,65 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="add_choice.xaml.cs">
+      <DependentUpon>add_choice.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="add_test.xaml.cs">
+      <DependentUpon>add_test.xaml</DependentUpon>
+    </Compile>
     <Compile Include="add_tester.xaml.cs">
       <DependentUpon>add_tester.xaml</DependentUpon>
     </Compile>
-    <Compile Include="menulateral.xaml.cs">
-      <DependentUpon>menulateral.xaml</DependentUpon>
+    <Compile Include="Get_Tests.xaml.cs">
+      <DependentUpon>Get_Tests.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="get_trainees.xaml.cs">
+      <DependentUpon>get_trainees.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="mainwindow.xaml.cs">
+      <DependentUpon>mainwindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="my_test.xaml.cs">
+      <DependentUpon>my_test.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="tester_choice.xaml.cs">
+      <DependentUpon>tester_choice.xaml</DependentUpon>
     </Compile>
     <Compile Include="Trainee_choice_window.xaml.cs">
       <DependentUpon>Trainee_choice_window.xaml</DependentUpon>
     </Compile>
+    <Compile Include="update_test.xaml.cs">
+      <DependentUpon>update_test.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="update_tester.xaml.cs">
+      <DependentUpon>update_tester.xaml</DependentUpon>
+    </Compile>
     <Compile Include="update_trainee.xaml.cs">
       <DependentUpon>update_trainee.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Window1.xaml.cs">
-      <DependentUpon>Window1.xaml</DependentUpon>
+    <Compile Include="add_trainee.xaml.cs">
+      <DependentUpon>add_trainee.xaml</DependentUpon>
     </Compile>
+    <Compile Include="what_test.xaml.cs">
+      <DependentUpon>what_test.xaml</DependentUpon>
+    </Compile>
+    <Page Include="add_choice.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="add_test.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="add_tester.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="menulateral.xaml">
+    <Page Include="Get_Tests.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="get_trainees.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -88,7 +127,27 @@
     <Compile Include="id_window.xaml.cs">
       <DependentUpon>id_window.xaml</DependentUpon>
     </Compile>
+    <Page Include="mainwindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="my_test.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="tester_choice.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Trainee_choice_window.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="update_test.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="update_tester.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -96,7 +155,11 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Window1.xaml">
+    <Page Include="add_trainee.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="what_test.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -157,6 +220,15 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="imagens\estudante_perfil.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="imagens\יםצק.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="imagens\professor.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="imagens\prova.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

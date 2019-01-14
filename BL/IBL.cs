@@ -22,6 +22,7 @@ namespace BL
         List<Trainee> Group_school(bool order = false);
         List<Trainee> Group_tester_of_trainee(bool order = false);
         List<Trainee> Group_num_of_tests(bool order = false);
+        List<Tester> Get_all_testers();
 
         void print_testers();
         void print_trainees();
@@ -31,10 +32,15 @@ namespace BL
 
         Trainee GetTrainee(int id);
         Tester Gettester(int id);
+        List<Test> GetTests();
+        List<Test> Get_my_tests(int id);
+        Test get_test_by_number(int num);
+
+        bool id_check(int number);
 
 
 
 
-       
+
     }
 }

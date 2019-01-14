@@ -23,7 +23,7 @@ namespace BE
         gender Tester_gender;
         Car_type Tester_ctype;
         Transmission_type Tester_transtype;
-        bool[,] Availability_tester = new bool[6, 5];
+        bool[,] Availability_tester = new bool[7, 5];
         static int Max_distance;
         
 
@@ -31,7 +31,17 @@ namespace BE
         {
             Tester clone = new Tester();
             clone.Tester_name = Tester_name;
-            clone.Tester_lname=Tester
+            clone.Tester_lname = Tester_lname;
+            clone.Tester_id = Tester_id;
+            clone.experience = experience;
+            clone.street_adress = street_adress;
+            clone.Tel_num = Tel_num;
+            clone.Tester_Birthday = Tester_Birthday;
+            clone.Tester_ctype = Tester_ctype;
+            clone.Tester_gender = Tester_gender;
+            clone.Tester_transtype = Tester_transtype;
+            clone.availabilitytester = availabilitytester;
+            
 
            return clone;
         }
@@ -148,6 +158,16 @@ namespace BE
                 }
             }
         }
+        public void availability(int t,int d)
+        {
+            Availability_tester[t, d] = true;
+        }
+
+        public void availability_false(int t, int d)
+        {
+            Availability_tester[t, d] = false;
+        }
+
 
         public int number_of_testsweek
         {

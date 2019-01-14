@@ -25,7 +25,7 @@ namespace PL
         {
            
             int segura = 0;
-            BL.BL_imp BLtemp=new BL_imp();
+            BL.IBL BLtemp= BL.Factory.GetBLL();
             BE.Test Testtemp=new BE.Test();
             BE.Tester Testertemp = new BE.Tester();
             BE.Trainee Traineetemp = new BE.Trainee();
@@ -141,8 +141,8 @@ namespace PL
                         Traineetemp.trainee_name = Console.ReadLine();
                         Traineetemp.trainee_lname = Console.ReadLine();
                         Traineetemp.traineetel = Convert.ToInt32(Console.ReadLine());
-                        Traineetemp.street_adress= Console.ReadLine();
-                        Traineetemp.housenum_adress = Convert.ToInt32(Console.ReadLine());
+                        Traineetemp.Street_adress= Console.ReadLine();
+                        Traineetemp.Housenum_adress = Convert.ToInt32(Console.ReadLine());
                         Traineetemp.traineebirthday = Convert.ToDateTime(Console.ReadLine());
                         Traineetemp.school = Console.ReadLine();
                         Traineetemp.my_tester = Console.ReadLine();
@@ -189,15 +189,18 @@ namespace PL
                         }
                         Traineetemp.trainee_ctype = x;
 
-                        try
+                       /* try
                         {
-                            BLtemp.addtrainee(new BE.Trainee(Traineetemp.traineeid ,Traineetemp.trainee_name , Traineetemp.trainee_lname , Traineetemp.trainee_gender, Traineetemp.traineetel , Traineetemp.street_adress , Traineetemp.Adress_city , Traineetemp.housenum_adress , Traineetemp.trainee_ctype , Traineetemp.trainee_transtype , Traineetemp.traineebirthday , Traineetemp.school,Traineetemp.my_tester));
+                            BLtemp.addtrainee(new BE.Trainee(Traineetemp.traineeid ,Traineetemp.trainee_name , Traineetemp.trainee_lname ,
+                                Traineetemp.trainee_gender, Traineetemp.traineetel , 
+                                Traineetemp.Street_adress , Traineetemp.Adress_city , Traineetemp.Housenum_adress , Traineetemp.trainee_ctype , 
+                                Traineetemp.trainee_transtype , Traineetemp.traineebirthday , Traineetemp.school,Traineetemp.my_tester));
                         }
                         catch (Exception i)
                         {
                             Console.WriteLine(i);
                         }
-
+                        */
 
                         break;
                     #endregion
@@ -347,8 +350,8 @@ namespace PL
                         Traineetemp.trainee_name = Console.ReadLine();
                         Traineetemp.trainee_lname = Console.ReadLine();
                         Traineetemp.traineetel = Convert.ToInt32(Console.ReadLine());
-                        Traineetemp.street_adress = Console.ReadLine();
-                        Traineetemp.housenum_adress = Convert.ToInt32(Console.ReadLine());
+                        Traineetemp.Street_adress = Console.ReadLine();
+                        Traineetemp.Housenum_adress = Convert.ToInt32(Console.ReadLine());
                         Traineetemp.traineebirthday = Convert.ToDateTime(Console.ReadLine());
                         Traineetemp.school = Console.ReadLine();
                         Traineetemp.my_tester = Console.ReadLine();

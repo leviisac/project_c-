@@ -2,10 +2,10 @@
 
 namespace DAL
 {
-    internal class Factory
+    public class Factory
     {
         static DAL.Idal dal;
-        internal static Idal GetDAL()
+        static public Idal GetDAL()
         {
             if (dal == null) dal = new DAL.Dal_imp();
             return dal;

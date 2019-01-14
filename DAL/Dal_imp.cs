@@ -8,30 +8,38 @@ using System.Threading.Tasks;
 
 namespace DAL
 {
-    public class Dal_imp : Idal
+    class Dal_imp : Idal
     {
 
 
         // ADD FUNCTIONS...
         //
 
-        public bool get_all(int id)
-        {
-            foreach (var item in DataSource.testers)
-            {
-
-            }
-        }
 
         public void add_test(Test x)
         {
-            if(Get_Test(x.testnum) != null)                                      //cheking if this test already exist
-                throw new Exception("tester with the this id, already exist...");  
+            List<Test> temp = new List<Test>();
+            temp = Get_all_tests();
+            foreach (var item in temp)
+            {
+                if (item.traineeid==x.traineeid && x.testdate==item.testdate)                                      //cheking if this test already exist
+                    throw new Exception("tester with this id, already exist...");
+            }
+         
 
             DataSource.testings.Add(x);                                           //if doesnt exist add to test list
            
         }
 
+        public Test get_test(int num)
+        {
+            foreach (var item in DataSource.testings)
+            {
+                if (item.testnum == num)
+                    return item;
+            }
+            throw new Exception("this test doesnt exist");
+        }
 
         public void add_trainee(Trainee x)
         {
@@ -66,12 +74,13 @@ namespace DAL
         }
 
 
-        public void delete_trainee(Trainee x)
+        public void delete_trainee(int x)
         {
             if (x == null)
                 throw new Exception("not found...");
 
-            DataSource.trainees.Remove(x);
+            DataSource.trainees.RemoveAt(x);
+
         }
 
 
@@ -84,10 +93,6 @@ namespace DAL
             return DataSource.testers.FirstOrDefault(s => s.testerid == id);
         }
 
-        public Test Get_Test(int num)
-        {
-            return DataSource.testings.FirstOrDefault(s => s.testnum == num);
-        }
 
         public Trainee Get_Trainee(int id)
         {
@@ -140,7 +145,7 @@ namespace DAL
 
         public List<Tester> Get_all_tester()
         {
-            List<Tester> Copy =new List<Tester> (DataSource.testers);
+            List<Tester> Copy = DataSource.testers.Select(x => x.Clone()).ToList();
             return Copy;
         }
 
@@ -152,7 +157,7 @@ namespace DAL
 
         public List<Test> Get_all_tests()
         {
-            List<Test> Copy = new List<Test>(DataSource.testings);
+            List<Test> Copy = DataSource.testings.Select(x => x.Clone()).ToList();
             return Copy;
         }
     }

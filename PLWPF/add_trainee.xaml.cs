@@ -11,54 +11,55 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
-
+using BE;
 namespace PLWPF
 {
     /// <summary>
-    /// Interaction logic for update_trainee.xaml
+    /// Interaction logic for Window1.xaml
     /// </summary>
-    public partial class update_trainee : Window
+    public partial class add_trainee : Window
     {
         BL.IBL BLtemp = BL.Factory.GetBLL();
-        BE.Trainee traineetemp = new BE.Trainee();
-        string name;
-        int id = new int();
-
-        public update_trainee(int i,string n)
+        BE.Trainee traineetemp=new BE.Trainee();
+        public add_trainee()
         {
             InitializeComponent();
-            id = i;
-            name = n;
             genderComboBox.ItemsSource = Enum.GetValues(typeof(BE.Types.gender)).Cast<BE.Types.gender>();
             Transmission_Trainee.ItemsSource = Enum.GetValues(typeof(BE.Types.Transmission_type)).Cast<BE.Types.Transmission_type>();
             ctype_Trainee.ItemsSource = Enum.GetValues(typeof(BE.Types.Car_type)).Cast<BE.Types.Car_type>();
-            traineetemp=BLtemp.GetTrainee(id);
             this.DataContext = traineetemp;
-            
         }
 
-        private void update_Click(object sender, RoutedEventArgs e)
+  
+
+        private void Add_Click(object sender, RoutedEventArgs e)
         {
-            try
+            if (BLtemp.id_check(traineetemp.traineeid) == false)
+                MessageBox.Show("your id incorrect", "id", MessageBoxButton.OK, MessageBoxImage.Error);
+            else
             {
-                BLtemp.update_trainee(traineetemp);
-                Trainee_choice_window window = new Trainee_choice_window(id, name);
-                this.Close();
-                window.ShowDialog();
-            }
-            catch(Exception x)
-            {
-                MessageBox.Show(x.ToString());            
+                try
+                {
+                    BLtemp.addtrainee(traineetemp);
+                    id_window temp2 = new id_window();
+                    MessageBox.Show("welcome!");
+                    this.Close();
+                    temp2.ShowDialog();
+                }
+                catch (Exception a)
+                {
+                    MessageBox.Show(a.ToString());
+                }
             }
            
-
         }
+
 
         private void Cancel_Click(object sender, RoutedEventArgs e)
         {
-            Trainee_choice_window wind = new Trainee_choice_window(id, name);
+            id_window temp = new id_window();
             this.Close();
-            wind.ShowDialog();
+            temp.Show();
         }
     }
 }

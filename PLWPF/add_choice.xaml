@@ -1,0 +1,33 @@
+﻿<Window x:Class="PLWPF.add_choice"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:PLWPF"
+        mc:Ignorable="d"
+        Title="add_choice" Height="450" Width="800">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="142*"/>
+            <RowDefinition Height="135*"/>
+            <RowDefinition Height="103*"/>
+            <RowDefinition Height="39*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="2*"/>
+            <ColumnDefinition Width="1.5*"/>
+            <ColumnDefinition Width="2*"/>
+            <ColumnDefinition Width="1.5*"/>
+            <ColumnDefinition Width="2*"/>
+        </Grid.ColumnDefinitions>
+        <Button x:Name="add_trainee" Grid.Column="1" Click="Add_trainee_Click" Grid.ColumnSpan="2" Margin="0,142,176.6,102.685" Grid.RowSpan="3">
+            <Image Source="imagens/estudante_perfil.jpg" />
+        </Button>
+
+
+        <Button x:Name="add_tester" Grid.Column="3" Click="Add_tester_Click" Grid.ColumnSpan="2" Margin="0.4,142,175.6,102.685" Grid.RowSpan="3">
+            <Image Source="imagens/professor.png"/>
+        </Button>
+        <Button Content="CANCEL" Grid.Row="3" Grid.Column="0" Click="Cancel_Click" />
+    </Grid>
+</Window>

@@ -21,7 +21,7 @@ namespace PLWPF
     
     public partial class id_window : Window
     {
-        BL.IBL blvar;
+        BL.IBL blvar = BL.Factory.GetBLL();
         BE.Trainee trainee_temp;
         BE.Tester tester_temp;
         public id_window()
@@ -37,26 +37,47 @@ namespace PLWPF
             try
             {
                 trainee_temp = blvar.GetTrainee(int.Parse(this.id_login.Text));
-                if (trainee_temp == null)
+
+                if (trainee_temp == null) //SE NÃO É TRAINEE...
                 {
                     tester_temp = blvar.Gettester(int.Parse(this.id_login.Text));
-                    if (tester_temp == null)
-                        throw new Exception("NOT FOUND! check your data ,and try again! ");
+                    if (tester_temp == null) // SE NÃO É NEM TESTER E NEM TRAINEE...
+                        throw new Exception("NOT FOUND! ");
+                    else
+                    {
+                        if (tester_temp.tester_name != this.name_login.Text)   //SE O NOMES NÃO COINCIDEM....
+                            throw new Exception("NOT FOUND!"); 
+                        tester_choice tester_window = new tester_choice(int.Parse(this.id_login.Text), name_login.Text);
+                        this.Close();
+                        tester_window.ShowDialog();
+                        
+                    }
+
                 }
                  
                 else
                 {
-                    Trainee_choice_window wind = new Trainee_choice_window();
-                    wind.Show();
+                    if (trainee_temp.trainee_name != this.name_login.Text)    //SE O NOMES NÃO COINCIDEM....
+                        throw new Exception("NOT FOUND!");
+                    Trainee_choice_window wind = new Trainee_choice_window(int.Parse(this.id_login.Text),name_login.Text);
+                    this.Close();
+                    wind.ShowDialog();
                 }
 
 
             }
             catch (Exception A)
             {
-                MessageBox.Show(Convert.ToString(A));
+                MessageBox.Show("NOT FOUND!");
             }
 
+        }
+
+        private void New_Click(object sender, RoutedEventArgs e)
+        {
+            add_choice temp = new add_choice();
+            this.Close();
+            temp.ShowDialog();
         }
     }
 }

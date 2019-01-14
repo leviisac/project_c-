@@ -19,7 +19,7 @@ namespace BE
         Adress Address_test;
         public bool[,] kriterionim = new bool[4, 2];
         string Notes;
-        Car_type Test_ctype;  //the car type of the test....
+        Car_type Test_ctype; //the car type of the test....
         bool Pass;  //return if the student pass the test....
 
         public int testnum
@@ -41,11 +41,31 @@ namespace BE
 
         public Test() { this.Test_num = temp.kod_ratz; }
 
+        public Test Clone()
+        {
+            Test clone = new Test();
+            clone.Trainee_id = Trainee_id;
+            clone.Test_num = Test_num;
+            clone.Test_date = Test_date;
+            clone.Test_ctype = Test_ctype;
+            clone.Tester_num = Tester_num;
+            clone.Pass = Pass;
+            clone.Notes = Notes;
+            clone.kriterionim = kriterionim;
+            clone.Address_test = Address_test;
+
+            return clone;
+        }
 
         public int testctype
         {
             get { return (int)Test_ctype; }
             set { Test_ctype = (Car_type)Enum.Parse(typeof(Car_type), value.ToString()); }
+        }
+        public string ctype_tester
+        {
+            get { return Convert.ToString(Test_ctype); }
+            set { Test_ctype= (Car_type)Enum.Parse(typeof(Car_type), value.ToString()); }
         }
 
         public bool pass

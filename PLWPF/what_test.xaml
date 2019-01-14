@@ -1,0 +1,30 @@
+﻿<Window x:Class="PLWPF.what_test"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:PLWPF"
+        mc:Ignorable="d"
+        Title="what_test" Height="300" Width="400">
+    <Grid Margin="-4,0,3.6,0.4">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="1.75*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1.65*"/>
+
+            <RowDefinition Height="1*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="55*"/>
+            <ColumnDefinition Width="126*"/>
+            <ColumnDefinition Width="166*"/>
+            <ColumnDefinition Width="46*"/>
+        </Grid.ColumnDefinitions>
+        <Label Content="TEST NUMBER:" FontSize="17" Grid.Row="1" Grid.ColumnSpan="3" Margin="55,0,141,81.8" Grid.RowSpan="2"/>
+        <TextBox x:Name="test_num" Grid.Column="2" Grid.Row="1" FontSize="17" Margin="7.4,7,5,6.4" />
+        
+        <Button Content="CONFIRM" Grid.Column="2" Grid.Row="3" Click="confirm_Click" Margin="60.4,0.2,-0.4,0.4" Grid.ColumnSpan="2" />
+        <Button Grid.ColumnSpan="2" Content="CANCEL" Click="exit_Click" HorizontalAlignment="Left" Margin="0,0.2,0,0" Grid.Row="3" VerticalAlignment="Top" Width="129" Height="49"/>
+
+    </Grid>
+</Window>
