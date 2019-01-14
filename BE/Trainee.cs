@@ -8,7 +8,7 @@ namespace BE
 {
     public class Trainee : Types
     {
-        //CONFIGURATION...
+        //CONFIGURATION
         public static  Configuration temp;
 
         int Trainee_id;
@@ -24,46 +24,133 @@ namespace BE
         string My_tester;
         int num_class;
         Test my_last_test;
+        int Num_of_tests;
+
+        //C-TOR
+
+        public Trainee(int trainee_id, string name, string lname, int xgender, int tel, string street_Adress, string city_Adress, int housenum, int ctype, int transtype, DateTime Birthday, string myschool, string mytester)
+        {
+            Trainee_id = trainee_id;
+            Trainee_name = name;
+            Trainee_lname = lname;
+            Trainee_gender = (gender)Enum.Parse(typeof(gender), xgender.ToString());
+            Trainee_tel = tel;
+            Trainee_Adress.city = city_Adress;
+            Trainee_Adress.street = street_Adress;
+            Trainee_Adress.house_num = housenum;
+            Trainee_Birthday = Birthday;
+            this.trainee_ctype = ctype;
+            this.trainee_transtype = transtype;
+            this.school = myschool;
+            this.my_tester = mytester;
+
+
+        }
+        public Trainee Clone()
+        {
+            Trainee clone = new Trainee();
+            clone.Trainee_tel = this.Trainee_tel;
+            clone.Trainee_name = Trainee_name;
+            clone.trainee_lname = trainee_lname;
+            clone.Trainee_id = Trainee_id;
+            clone.Trainee_gender = Trainee_gender;
+            clone.Trainee_Adress.city = Trainee_Adress.city;
+            clone.Trainee_Adress.street = Trainee_Adress.street;
+            clone.Trainee_Adress.house_num = Trainee_Adress.house_num;
+            clone.Trainee_Birthday = Trainee_Birthday;
+            clone.Trainee_ctype = Trainee_ctype;
+            clone.Trainee_transtype = Trainee_transtype;
+            clone.School = School;
+            clone.My_tester = My_tester;
+            clone.my_last_test = my_last_test;
+
+
+            return clone;
+        }
+
+
+        public Trainee() { }
+
+
+
+        public int num_of_tests
+        {
+            get { return Num_of_tests; }
+            set { Num_of_tests = value; }
+        } 
+
+
 
         public int traineetel
         {
             get { return Trainee_tel; }
             set { Trainee_tel = value; }
         }
+
+
         public string trainee_name
         {
             get { return Trainee_name; }
             set { Trainee_name = value; }
         }
+
+
         public string trainee_lname
         {
             get { return Trainee_lname; }
             set { Trainee_lname = value; }
         }
-        public gender trainee_gender
+
+
+        public int trainee_gender
         {
-            get { return Trainee_gender; }
-            set { Trainee_gender = value; }
+            get { return (int)Trainee_gender; }
+            set { Trainee_gender = (gender)Enum.Parse(typeof(gender), value.ToString()); }
         }
-        public Adress trainee_Adress
+
+
+        public string Adress_city
         {
-            get { return Trainee_Adress; }
-            set { trainee_Adress = value; }
+            get { return Trainee_Adress.city; }
+            set { Trainee_Adress.city = value; }
         }
-        public Car_type trainee_ctype
+
+
+        public string street_adress
         {
-            get { return Trainee_ctype; }
-            set { Trainee_ctype = value; }
+            get { return Trainee_Adress.street; }
+            set { Trainee_Adress.street = value; }
         }
-        public Transmission_type trainee_transtype
+
+
+        public int housenum_adress
         {
-            get { return Trainee_transtype; }
-            set { Trainee_transtype = value; }
+            get { return Trainee_Adress.house_num; }
+            set { Trainee_Adress.house_num = value; }
         }
-        public Trainee()
+        public int trainee_ctype
         {
-            Trainee_id = temp.kod_ratz();
+            get { return (int)Trainee_ctype; }
+            set { Trainee_ctype = (Car_type)Enum.Parse(typeof(Car_type), value.ToString()); }
         }
+
+        public int trainee_transtype
+        {
+            get { return (int)Trainee_transtype; }
+            set { Trainee_transtype = (Transmission_type)Enum.Parse(typeof(Transmission_type), value.ToString()); }
+        }
+
+
+      
+
+
+        public string tctype_string
+        {
+          
+            get { return Convert.ToString(Trainee_transtype); }
+        }
+
+
 
         public int traineeid
         {

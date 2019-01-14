@@ -9,6 +9,9 @@ namespace BE
 {
     public class Test : Types
     {
+        public static Configuration temp=new Configuration();
+
+
         int Test_num;
         int Tester_num;
         int Trainee_id;
@@ -16,6 +19,40 @@ namespace BE
         Adress Address_test;
         public bool[,] kriterionim = new bool[4, 2];
         string Notes;
+        Car_type Test_ctype;  //the car type of the test....
+        bool Pass;  //return if the student pass the test....
+
+        public int testnum
+        {
+            get { return Test_num; }
+        }
+        public Test(int ntester,int idTrainee,DateTime tdate,string street,int num,string city,int x)
+        {
+            Test_num = temp.kod_ratz;
+            Tester_num = ntester;
+            Trainee_id = idTrainee;
+            Test_date = tdate;
+            Address_test.street = street;
+            Address_test.house_num = num;
+            Address_test.city = city;
+            Test_ctype = (Car_type)Enum.Parse(typeof(Car_type), x.ToString());
+
+        }
+
+        public Test() { this.Test_num = temp.kod_ratz; }
+
+
+        public int testctype
+        {
+            get { return (int)Test_ctype; }
+            set { Test_ctype = (Car_type)Enum.Parse(typeof(Car_type), value.ToString()); }
+        }
+
+        public bool pass
+        {
+            get { return Pass; }
+            set { Pass = value; }
+        }
 
         public string notes
         {
@@ -24,10 +61,23 @@ namespace BE
         }
 
 
-        public Adress adresstest
+        public string adresscity
         {
-            get{ return Address_test; }
-            set { Address_test = value; }
+            get{ return Address_test.city; }
+            set { Address_test.city = value; }
+        }
+
+        public string adressstreet
+        {
+
+            get { return Address_test.street; }
+            set { Address_test.street = value; }
+        }
+
+        public int adressnum
+        {
+            get { return Address_test.house_num; }
+            set { Address_test.house_num = value; }
         }
 
         public int traineeid
@@ -40,6 +90,7 @@ namespace BE
         public int testernum
         {
             get { return Tester_num; }
+            set { Tester_num = value; }
         }
 
 
@@ -47,14 +98,7 @@ namespace BE
         {
             get { return Test_date; }
             set { Test_date = value; }
-        }
+        }   
 
-
-
-        public int testnum
-        {
-            get { return Test_num; }
-            set { Test_num = value; }
-        }
     }
 }

@@ -12,7 +12,7 @@ namespace BE
         static public int min_days_between_tests = 7;
         static public int tester_gil_minimum = 40;
         static public int min_num_of_class = 20;
-        public static int kodratz = 00000000;
+        public static int kodratz = 00000001;
 
 
         public int min_numofclass
@@ -39,10 +39,10 @@ namespace BE
             set { trainee_gil_min = value; }
         }
         
-        public int kod_ratz()
+        public int kod_ratz
         {
-            kodratz++;
-            return kodratz;
+            get { kodratz++;
+                return kodratz; }
         }
     }
 }

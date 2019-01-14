@@ -1,0 +1,84 @@
+﻿<Window x:Class="PLWPF.Window1"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:PLWPF"
+        mc:Ignorable="d"
+        Title="Window1" Height="550" Width="800">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="1.75*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="100*"/>
+            <ColumnDefinition Width="122*"/>
+            <ColumnDefinition Width="142*"/>
+            <ColumnDefinition Width="130*"/>
+            <ColumnDefinition Width="153*"/>
+            <ColumnDefinition Width="100*"/>
+
+        </Grid.ColumnDefinitions>
+        <Image Source="imagens/perfil.jpg" Height="100"  VerticalAlignment="center" Grid.ColumnSpan="6" Margin="0,34,-0.4,22" Grid.Row="3" Grid.RowSpan="3"/>
+        <Label Content="Name:" Grid.Column="1" Grid.Row="1" FontSize="20" FontStyle="Oblique" Grid.ColumnSpan="2" Margin="7.4,0,141.4,42" Grid.RowSpan="2" />
+        <TextBox x:Name="name_trainee" Grid.Column="2"  Margin="4,5,5.4,4"  Grid.Row="1"/>
+
+        <Label Content="Last Name:" Grid.Column="1" Grid.Row="2" FontSize="20" FontStyle="Oblique" Grid.ColumnSpan="2" Margin="7.4,0,141.4,0" />
+        <TextBox x:Name="lname_trainee" Grid.Column="2"  Margin="4,5,5.4,5"  Grid.Row="2"/>
+
+        <Label Content=" id:" Grid.Column="1" Grid.Row="3" FontSize="20" FontStyle="Oblique" Grid.ColumnSpan="2" Margin="7.4,0,141.4,0" />
+        <TextBox x:Name="id_trainee" Grid.Column="2"  Margin="4,5,5.4,5"  Grid.Row="3"/>
+
+        <Label Content="street:" Grid.Column="1" Grid.Row="5" FontSize="20" FontStyle="Oblique" Grid.ColumnSpan="2" Margin="7.4,0,141.4,0" />
+        <TextBox x:Name="street_trainee" Grid.Column="2"  Margin="4,5,5.4,5"  Grid.Row="5"/>
+
+        <Label Content="house num:" Grid.Column="1" Grid.Row="5" FontSize="20" FontStyle="Oblique" Grid.ColumnSpan="2" Margin="7.4,42,141.4,41" Grid.RowSpan="3" />
+        <TextBox x:Name="housenum_trainee" Grid.Column="2"  Margin="4,5,5.4,4"  Grid.Row="6"/>
+
+        <Label Content="city:" Grid.Column="1" Grid.Row="7" FontSize="20" FontStyle="Oblique" Grid.ColumnSpan="2" Margin="7.4,0,141.4,0" />
+        <TextBox x:Name="city_trainee" Grid.Column="2"  Margin="4,5,5.4,5"  Grid.Row="7"/>
+
+        <Label Content="school:" Grid.Column="3" Grid.Row="1" FontSize="20" FontStyle="Oblique" Grid.ColumnSpan="2" Margin="7.6,0,44.8,42" Grid.RowSpan="2" />
+        <TextBox x:Name="school_trainee" Grid.Column="4"  Margin="4,5,4.8,5"  Grid.Row="1"/>
+
+        <Label Content="tel:" Grid.Column="3" Grid.Row="2" FontSize="20" FontStyle="Oblique" Grid.ColumnSpan="2" Margin="7.6,0,44.8,42" Grid.RowSpan="2" />
+        <TextBox x:Name="tel_trainee" Grid.Column="4"  Margin="4,5,4.8,5"  Grid.Row="2"/>
+
+        <Label Content="tester:" Grid.Column="3" Grid.Row="3" FontSize="20" FontStyle="Oblique" Grid.ColumnSpan="2" Margin="7.6,0,44.8,42" Grid.RowSpan="2" />
+        <TextBox x:Name="tester_of_trainee" Grid.Column="4"  Margin="4,5,4.8,5"  Grid.Row="3"/>
+
+        <Label Content="num of class" Grid.Column="1" Grid.Row="8" FontSize="20" FontStyle="Oblique" Grid.ColumnSpan="2" Margin="0.4,0,52.4,41.8" Grid.RowSpan="2" />
+        <TextBox x:Name="numclass_of_trainee" Grid.Column="2"  Margin="4,5,4.8,5"  Grid.Row="8"/>
+
+        <Label Content="Birthday:" Grid.Column="3" Grid.Row="5" FontSize="20" FontStyle="Oblique"/>
+        <DatePicker  Grid.Column="4"  Grid.Row="5" FontSize="20"/>
+
+        <Label Content="Car type:" Grid.Column="3" Grid.Row="6" FontSize="20" FontStyle="Oblique"/>
+        <ComboBox  Grid.Column="4"   Grid.Row="6"  Margin="10"/>
+
+        <Label Content="Transmission:" Grid.Column="3" Grid.Row="7" FontSize="20" FontStyle="Oblique"/>
+        <ComboBox  Grid.Column="4"   Grid.Row="7" Margin="10"/>
+
+        <Label Content="Gender:" Grid.Column="3" Grid.Row="8" FontSize="20" FontStyle="Oblique"/>
+        <ComboBox  Grid.Column="4"   Grid.Row="8" Margin="10"/>
+       
+        <Button Content="ADD" Grid.Column="5"  Grid.Row="9" Margin="7" Background="AliceBlue"  />
+        <Button Content="Cancel"  Margin="10" Grid.Row="9" />
+
+
+
+
+
+
+
+    </Grid>
+</Window>

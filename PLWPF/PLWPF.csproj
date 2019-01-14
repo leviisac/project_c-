@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{7F117116-EB81-44D2-9477-924E213AA3DE}</ProjectGuid>
+    <ProjectGuid>{24F83CC1-A8C2-4FBC-9082-F8DA9E91A8D6}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <RootNamespace>Project01_8446_9479_dotNet5779</RootNamespace>
-    <AssemblyName>Project01_8446_9479_dotNet5779</AssemblyName>
+    <RootNamespace>PLWPF</RootNamespace>
+    <AssemblyName>PLWPF</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
@@ -54,10 +54,52 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="add_tester.xaml.cs">
+      <DependentUpon>add_tester.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="menulateral.xaml.cs">
+      <DependentUpon>menulateral.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Trainee_choice_window.xaml.cs">
+      <DependentUpon>Trainee_choice_window.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="update_trainee.xaml.cs">
+      <DependentUpon>update_trainee.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Window1.xaml.cs">
+      <DependentUpon>Window1.xaml</DependentUpon>
+    </Compile>
+    <Page Include="add_tester.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="menulateral.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="id_window.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="id_window.xaml.cs">
+      <DependentUpon>id_window.xaml</DependentUpon>
+    </Compile>
+    <Page Include="Trainee_choice_window.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="update_trainee.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Window1.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs">
@@ -77,6 +119,15 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <None Include="Properties\DataSources\BE.Configuration.datasource" />
+    <None Include="Properties\DataSources\BE.Test.datasource" />
+    <None Include="Properties\DataSources\BE.Tester.datasource" />
+    <None Include="Properties\DataSources\BE.Trainee.datasource" />
+    <None Include="Properties\DataSources\BE.Types+Adress.datasource" />
+    <None Include="Properties\DataSources\BE.Types+Car_type.datasource" />
+    <None Include="Properties\DataSources\BE.Types+gender.datasource" />
+    <None Include="Properties\DataSources\BE.Types+Transmission_type.datasource" />
+    <None Include="Properties\DataSources\BE.Types.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -84,6 +135,28 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BE\BE.csproj">
+      <Project>{4c07e828-9bab-4a7f-aa02-4e47acfe94c9}</Project>
+      <Name>BE</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\BL\BL.csproj">
+      <Project>{8009885a-d6e7-42ee-ac69-13caeedfac70}</Project>
+      <Name>BL</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="imagens\download.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="imagens\perfil.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="imagens\carro.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="imagens\estudante_perfil.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -8,12 +8,20 @@ using System.Threading.Tasks;
 
 namespace DAL
 {
-    internal class Dal_imp : Idal
+    public class Dal_imp : Idal
     {
 
 
         // ADD FUNCTIONS...
         //
+
+        public bool get_all(int id)
+        {
+            foreach (var item in DataSource.testers)
+            {
+
+            }
+        }
 
         public void add_test(Test x)
         {
@@ -49,7 +57,7 @@ namespace DAL
 
 
 
-        public void erase_tester(Tester x)
+        public void delete_tester(Tester x)
         {
             if (x == null)
                 throw new Exception("not found...");
@@ -58,7 +66,7 @@ namespace DAL
         }
 
 
-        public void erase_trainee(Trainee x)
+        public void delete_trainee(Trainee x)
         {
             if (x == null)
                 throw new Exception("not found...");
@@ -83,7 +91,22 @@ namespace DAL
 
         public Trainee Get_Trainee(int id)
         {
-            return DataSource.trainees.FirstOrDefault(s => s.traineeid == id);
+            //return DataSource.trainees.FirstOrDefault(s => s.traineeid == id);
+            return DataSource.trainees.ToList().Find(s => s.traineeid == id);
+
+        }
+
+
+        public List<Test> Get_tests_of_trainee(int id)
+        {
+            List<Test> test_of_students = new List<Test>();
+
+            foreach (var item in DataSource.testings)
+            {
+                if (item.traineeid == id)
+                    test_of_students.Add(item);
+            }
+            return test_of_students;
         }
 
 
@@ -113,6 +136,24 @@ namespace DAL
             if (index == -1)
                 throw new Exception("trainee with the same id not found...");
             DataSource.trainees[index] = x;
+        }
+
+        public List<Tester> Get_all_tester()
+        {
+            List<Tester> Copy =new List<Tester> (DataSource.testers);
+            return Copy;
+        }
+
+        public List<Trainee> Get_all_trainee()
+        {
+            List<Trainee> Copy = DataSource.trainees.Select(x => x.Clone()).ToList();
+            return Copy;
+        }
+
+        public List<Test> Get_all_tests()
+        {
+            List<Test> Copy = new List<Test>(DataSource.testings);
+            return Copy;
         }
     }
 }
